@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B539EB0C1B950C4D00E62660 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B539EB0B1B950C4D00E62660 /* main.m */; };
+		B539EB0F1B950C4D00E62660 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B539EB0E1B950C4D00E62660 /* AppDelegate.m */; };
+		B539EB121B950C4D00E62660 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B539EB111B950C4D00E62660 /* ViewController.m */; };
+		B539EB151B950C4D00E62660 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B539EB131B950C4D00E62660 /* Main.storyboard */; };
+		B539EB171B950C4D00E62660 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B539EB161B950C4D00E62660 /* Images.xcassets */; };
+		B539EB1A1B950C4D00E62660 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B539EB181B950C4D00E62660 /* LaunchScreen.xib */; };
+		B539EB261B950C4E00E62660 /* LocationRemindersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B539EB251B950C4E00E62660 /* LocationRemindersTests.m */; };
+		B539EB301B950C5800E62660 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B539EB2F1B950C5800E62660 /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B539EB201B950C4E00E62660 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B539EAFE1B950C4D00E62660 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B539EB051B950C4D00E62660;
+			remoteInfo = LocationReminders;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B539EB061B950C4D00E62660 /* LocationReminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationReminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B539EB0A1B950C4D00E62660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B539EB0B1B950C4D00E62660 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B539EB0D1B950C4D00E62660 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B539EB0E1B950C4D00E62660 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B539EB101B950C4D00E62660 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B539EB111B950C4D00E62660 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B539EB141B950C4D00E62660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B539EB161B950C4D00E62660 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B539EB191B950C4D00E62660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B539EB1F1B950C4E00E62660 /* LocationRemindersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationRemindersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B539EB241B950C4E00E62660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B539EB251B950C4E00E62660 /* LocationRemindersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationRemindersTests.m; sourceTree = "<group>"; };
+		B539EB2F1B950C5800E62660 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B539EB031B950C4D00E62660 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B539EB301B950C5800E62660 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B539EB1C1B950C4E00E62660 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B539EAFD1B950C4D00E62660 = {
+			isa = PBXGroup;
+			children = (
+				B539EB2F1B950C5800E62660 /* MapKit.framework */,
+				B539EB081B950C4D00E62660 /* LocationReminders */,
+				B539EB221B950C4E00E62660 /* LocationRemindersTests */,
+				B539EB071B950C4D00E62660 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B539EB071B950C4D00E62660 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B539EB061B950C4D00E62660 /* LocationReminders.app */,
+				B539EB1F1B950C4E00E62660 /* LocationRemindersTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B539EB081B950C4D00E62660 /* LocationReminders */ = {
+			isa = PBXGroup;
+			children = (
+				B539EB0D1B950C4D00E62660 /* AppDelegate.h */,
+				B539EB0E1B950C4D00E62660 /* AppDelegate.m */,
+				B539EB101B950C4D00E62660 /* ViewController.h */,
+				B539EB111B950C4D00E62660 /* ViewController.m */,
+				B539EB131B950C4D00E62660 /* Main.storyboard */,
+				B539EB161B950C4D00E62660 /* Images.xcassets */,
+				B539EB181B950C4D00E62660 /* LaunchScreen.xib */,
+				B539EB091B950C4D00E62660 /* Supporting Files */,
+			);
+			path = LocationReminders;
+			sourceTree = "<group>";
+		};
+		B539EB091B950C4D00E62660 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B539EB0A1B950C4D00E62660 /* Info.plist */,
+				B539EB0B1B950C4D00E62660 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B539EB221B950C4E00E62660 /* LocationRemindersTests */ = {
+			isa = PBXGroup;
+			children = (
+				B539EB251B950C4E00E62660 /* LocationRemindersTests.m */,
+				B539EB231B950C4E00E62660 /* Supporting Files */,
+			);
+			path = LocationRemindersTests;
+			sourceTree = "<group>";
+		};
+		B539EB231B950C4E00E62660 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B539EB241B950C4E00E62660 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B539EB051B950C4D00E62660 /* LocationReminders */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B539EB291B950C4E00E62660 /* Build configuration list for PBXNativeTarget "LocationReminders" */;
+			buildPhases = (
+				B539EB021B950C4D00E62660 /* Sources */,
+				B539EB031B950C4D00E62660 /* Frameworks */,
+				B539EB041B950C4D00E62660 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocationReminders;
+			productName = LocationReminders;
+			productReference = B539EB061B950C4D00E62660 /* LocationReminders.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B539EB1E1B950C4E00E62660 /* LocationRemindersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B539EB2C1B950C4E00E62660 /* Build configuration list for PBXNativeTarget "LocationRemindersTests" */;
+			buildPhases = (
+				B539EB1B1B950C4E00E62660 /* Sources */,
+				B539EB1C1B950C4E00E62660 /* Frameworks */,
+				B539EB1D1B950C4E00E62660 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B539EB211B950C4E00E62660 /* PBXTargetDependency */,
+			);
+			name = LocationRemindersTests;
+			productName = LocationRemindersTests;
+			productReference = B539EB1F1B950C4E00E62660 /* LocationRemindersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B539EAFE1B950C4D00E62660 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Benjamin Laddin";
+				TargetAttributes = {
+					B539EB051B950C4D00E62660 = {
+						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					B539EB1E1B950C4E00E62660 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = B539EB051B950C4D00E62660;
+					};
+				};
+			};
+			buildConfigurationList = B539EB011B950C4D00E62660 /* Build configuration list for PBXProject "LocationReminders" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B539EAFD1B950C4D00E62660;
+			productRefGroup = B539EB071B950C4D00E62660 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B539EB051B950C4D00E62660 /* LocationReminders */,
+				B539EB1E1B950C4E00E62660 /* LocationRemindersTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B539EB041B950C4D00E62660 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B539EB151B950C4D00E62660 /* Main.storyboard in Resources */,
+				B539EB1A1B950C4D00E62660 /* LaunchScreen.xib in Resources */,
+				B539EB171B950C4D00E62660 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B539EB1D1B950C4E00E62660 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B539EB021B950C4D00E62660 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B539EB121B950C4D00E62660 /* ViewController.m in Sources */,
+				B539EB0F1B950C4D00E62660 /* AppDelegate.m in Sources */,
+				B539EB0C1B950C4D00E62660 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B539EB1B1B950C4E00E62660 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B539EB261B950C4E00E62660 /* LocationRemindersTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B539EB211B950C4E00E62660 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B539EB051B950C4D00E62660 /* LocationReminders */;
+			targetProxy = B539EB201B950C4E00E62660 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B539EB131B950C4D00E62660 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B539EB141B950C4D00E62660 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B539EB181B950C4D00E62660 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B539EB191B950C4D00E62660 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B539EB271B950C4E00E62660 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B539EB281B950C4E00E62660 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B539EB2A1B950C4E00E62660 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LocationReminders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B539EB2B1B950C4E00E62660 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LocationReminders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B539EB2D1B950C4E00E62660 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LocationRemindersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocationReminders.app/LocationReminders";
+			};
+			name = Debug;
+		};
+		B539EB2E1B950C4E00E62660 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LocationRemindersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocationReminders.app/LocationReminders";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B539EB011B950C4D00E62660 /* Build configuration list for PBXProject "LocationReminders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B539EB271B950C4E00E62660 /* Debug */,
+				B539EB281B950C4E00E62660 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B539EB291B950C4E00E62660 /* Build configuration list for PBXNativeTarget "LocationReminders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B539EB2A1B950C4E00E62660 /* Debug */,
+				B539EB2B1B950C4E00E62660 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B539EB2C1B950C4E00E62660 /* Build configuration list for PBXNativeTarget "LocationRemindersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B539EB2D1B950C4E00E62660 /* Debug */,
+				B539EB2E1B950C4E00E62660 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B539EAFE1B950C4D00E62660 /* Project object */;
+}
