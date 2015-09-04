@@ -7,18 +7,30 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
 @end
 
+
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+  // [Optional] Power your app with Local Datastore. For more info, go to
+  // https://parse.com/docs/ios_guide#localdatastore/iOS
+  [Parse enableLocalDatastore];
+  
+  // Initialize Parse.
+  [Parse setApplicationId:@"VX5aXMSgwfGp3omfTzLWZDCbCH131rfe8X4jElsJ"
+                clientKey:@"MNoUSrE1VwGBgncGK1lW6sUVfTp16LlNwnpExzXR"];
+  
+  // [Optional] Track statistics around application opens.
+  [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
   return YES;
+  // ...
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
   // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
