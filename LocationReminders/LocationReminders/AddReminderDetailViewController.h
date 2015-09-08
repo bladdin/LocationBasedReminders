@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+//NSString *reminderText;
+//NSString *latText;
+//NSString *longText;
+
 
 @interface AddReminderDetailViewController : UIViewController
+
+
 
 @end

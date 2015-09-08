@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5099CBA1B9D6F6F0002AC60 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = B5099CB91B9D6F6F0002AC60 /* Reminder.m */; };
 		B538380E1B98CBD400C9F128 /* AddReminderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B538380D1B98CBD400C9F128 /* AddReminderDetailViewController.m */; };
 		B53838191B98D29300C9F128 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53838121B98D29300C9F128 /* Bolts.framework */; };
 		B538381A1B98D29300C9F128 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53838131B98D29300C9F128 /* Parse.framework */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5099CB81B9D6F6F0002AC60 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
+		B5099CB91B9D6F6F0002AC60 /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
 		B538380C1B98CBD400C9F128 /* AddReminderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReminderDetailViewController.h; sourceTree = "<group>"; };
 		B538380D1B98CBD400C9F128 /* AddReminderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReminderDetailViewController.m; sourceTree = "<group>"; };
 		B53838121B98D29300C9F128 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -125,6 +128,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5099CBB1B9D748F0002AC60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B539EB131B950C4D00E62660 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B5099CBC1B9D749D0002AC60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B539EB101B950C4D00E62660 /* ViewController.h */,
+				B539EB111B950C4D00E62660 /* ViewController.m */,
+				B538380C1B98CBD400C9F128 /* AddReminderDetailViewController.h */,
+				B538380D1B98CBD400C9F128 /* AddReminderDetailViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B5099CBD1B9D74AA0002AC60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B538383B1B98D62700C9F128 /* Keys.h */,
+				B538383C1B98D62700C9F128 /* Keys.m */,
+				B59B149C1B97599200D7CEF7 /* Constants.h */,
+				B59B149D1B97599200D7CEF7 /* Constants.m */,
+				B5099CB81B9D6F6F0002AC60 /* Reminder.h */,
+				B5099CB91B9D6F6F0002AC60 /* Reminder.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		B53838111B98D27A00C9F128 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,15 +211,9 @@
 			children = (
 				B539EB0D1B950C4D00E62660 /* AppDelegate.h */,
 				B539EB0E1B950C4D00E62660 /* AppDelegate.m */,
-				B538383B1B98D62700C9F128 /* Keys.h */,
-				B538383C1B98D62700C9F128 /* Keys.m */,
-				B539EB101B950C4D00E62660 /* ViewController.h */,
-				B539EB111B950C4D00E62660 /* ViewController.m */,
-				B59B149C1B97599200D7CEF7 /* Constants.h */,
-				B59B149D1B97599200D7CEF7 /* Constants.m */,
-				B538380C1B98CBD400C9F128 /* AddReminderDetailViewController.h */,
-				B538380D1B98CBD400C9F128 /* AddReminderDetailViewController.m */,
-				B539EB131B950C4D00E62660 /* Main.storyboard */,
+				B5099CBD1B9D74AA0002AC60 /* Models */,
+				B5099CBC1B9D749D0002AC60 /* Controllers */,
+				B5099CBB1B9D748F0002AC60 /* Views */,
 				B539EB161B950C4D00E62660 /* Images.xcassets */,
 				B539EB181B950C4D00E62660 /* LaunchScreen.xib */,
 				B539EB091B950C4D00E62660 /* Supporting Files */,
@@ -329,6 +358,7 @@
 				B538380E1B98CBD400C9F128 /* AddReminderDetailViewController.m in Sources */,
 				B539EB0C1B950C4D00E62660 /* main.m in Sources */,
 				B59B149E1B97599200D7CEF7 /* Constants.m in Sources */,
+				B5099CBA1B9D6F6F0002AC60 /* Reminder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

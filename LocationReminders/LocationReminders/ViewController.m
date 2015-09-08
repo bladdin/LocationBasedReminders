@@ -6,18 +6,19 @@
 //  Copyright (c) 2015 Benjamin Laddin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
+#import "AddReminderDetailViewController.h"
 
-@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *MKMapView;
 @property (weak, nonatomic) IBOutlet UIButton *nyButton;
 @property (weak, nonatomic) IBOutlet UIButton *seattleButton;
 @property (weak, nonatomic) IBOutlet UIButton *tokyoButton;
-
 @property (copy, nonatomic) void(^myBlock)(NSString *);
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
@@ -30,14 +31,21 @@
   [super viewDidLoad];
  // self.myBlock = ^void(NSString *name){
 //}
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"textNotification" object:self];
+  //sign up to receive notification for a given name
+  
+  
+  
+  
   self.MKMapView.delegate = self;
   self.MKMapView.showsUserLocation = true;
   NSLog(@"%d", [CLLocationManager authorizationStatus]);
   self.locationManager = [[CLLocationManager alloc]init];
   self.locationManager.delegate = self;
   [self.locationManager requestWhenInUseAuthorization];
-  
   [self.locationManager startUpdatingLocation];
+//  double latDouble = [latText doubleValue];
+//  double longDouble = [longText doubleValue];
   
   
   UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(mapLongPress:)];
@@ -45,6 +53,27 @@
   [self.MKMapView addGestureRecognizer:longPressGesture];
   
   //[longPressGesture release];
+  
+//  PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:latDouble longitude:longDouble];
+//  PFObject *reminderPlaces = [[PFObject alloc] initWithClassName:@"reminderPlaces"];
+//  reminderPlaces[@"location"] = geoPoint;
+//  reminderPlaces[@"name"] = reminderText;
+  
+//  [reminderPlaces saveInBackground];
+//  [reminderPlaces saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+//    if (error) {
+//      
+//    }else if (succeeded){
+//     
+//      
+//    }
+//  }];
+  
+  //PFQuery *query = [PFQuery queryWithClassName:@"reminderPlaces"];
+  //[query whereKey:@"location" nearGeoPoint:geoPoint];
+//  [query findObjectsInBackgroundWithBlock:^()NSArray *objects, NSError *error]{
+//    NSLog(@)
+//  }
   
 }
 
@@ -59,6 +88,11 @@
   annot.title = @"Heres a Pin";
   [self.MKMapView addAnnotation:annot];
   }
+
+//write method that fires when notification is received, this will upload the reminder to parse
+//pull the userInfo dictionary out of the notification
+
+
 
 //location magager delagate
 
@@ -79,9 +113,18 @@
   
 }
 
-//- (void)locationManager:(CLLocationManager *)manger didUpdateLocations:(NSArray *)locations{
-//  CLLocation *Location = locations.lastObject;
-//}
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+  CLLocation *location = locations.lastObject;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
+  NSLog(@"entered region");
+  
+  UILocalNotification *notification = [[UILocalNotification alloc]init];
+  notification.alertTitle = @"Region Entered";
+  notification.alertBody = @"You have entered your intended region";
+}
+
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
   [self performSegueWithIdentifier:@"toAddReminderDetailViewController" sender:view];
@@ -131,5 +174,7 @@
 - (IBAction)tokyoButtonPressed:(id)sender {
   [self.MKMapView setRegion:MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(35.6833, 139.6833), 100, 100) animated:true];
 }
+
+
 
 @end

@@ -7,31 +7,78 @@
 //
 
 #import "AddReminderDetailViewController.h"
+#import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
-@interface AddReminderDetailViewController ()
+@interface AddReminderDetailViewController ()<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *reminderTextField;
+@property (weak, nonatomic) IBOutlet UITextField *latTextField;
+@property (weak, nonatomic) IBOutlet UITextField *longTextField;
+
+
 
 @end
+
+
 
 @implementation AddReminderDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//  reminderText = self.reminderTextField.text;
+//  latText = self.latTextField.text;
+//  longText = self.latTextField.text;
+  
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)doneButtonPressed:(id)sender {
+  NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                            self.reminderTextField, @"reminderTextfield",
+                            self.latTextField, @"latTextField",
+                            self.longTextField, @"longTextField",
+                            nil];
+  
+  [[NSNotificationCenter defaultCenter]postNotificationName:@"textNotification" object:nil userInfo:userInfo];
+  [self.navigationController popViewControllerAnimated:true];
+  
 }
-*/
+
+- (IBAction)signUpButtonPressed:(id)sender {
+  PFSignUpViewController *signUpVC = [[PFSignUpViewController alloc] init];
+  signUpVC.delegate = self;
+  [self presentViewController:signUpVC animated:true completion:nil];
+}
+
+-(void)signUpViewController:(PFSignUpViewController * __nonnull)signUpController didSignUpUser:(PFUser * __nonnull)user{
+  [signUpController dismissViewControllerAnimated:true completion:nil];
+}
+- (IBAction)loginButtonPress:(id)sender {
+  PFLogInViewController *logInVC = [[PFLogInViewController alloc] init];
+  logInVC.delegate = self;
+  [self presentViewController:logInVC animated:true completion:nil];
+  
+}
+
+-(void)logInViewController:(PFLogInViewController * __nonnull)logInController didLogInUser:(PFUser * __nonnull)user{
+  [logInController dismissViewControllerAnimated:true completion:nil];
+}
+- (IBAction)logOutButtonPress:(id)sender {
+  [PFUser logOut];
+}
+- (IBAction)reminderNameTextField:(id)sender {
+  
+}
+- (IBAction)latCoordinateTextField:(id)sender {
+  
+}
+- (IBAction)longCoordinateTextField:(id)sender {
+  
+}
+
 
 @end
