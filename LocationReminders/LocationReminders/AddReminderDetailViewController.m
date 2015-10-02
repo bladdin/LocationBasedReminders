@@ -26,9 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//  reminderText = self.reminderTextField.text;
-//  latText = self.latTextField.text;
-//  longText = self.latTextField.text;
+
   
 }
 
@@ -38,12 +36,12 @@
 }
 - (IBAction)doneButtonPressed:(id)sender {
   NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-                            self.reminderTextField, @"reminderTextfield",
-                            self.latTextField, @"latTextField",
-                            self.longTextField, @"longTextField",
+                            self.reminderTextField.text, @"reminderTextfield",
+                            self.latTextField.text, @"latTextField",
+                            self.longTextField.text, @"longTextField",
                             nil];
   
-  [[NSNotificationCenter defaultCenter]postNotificationName:@"textNotification" object:nil userInfo:userInfo];
+  [[NSNotificationCenter defaultCenter]postNotificationName:@"textNotification" object:self userInfo:userInfo];
   [self.navigationController popViewControllerAnimated:true];
   
 }
@@ -79,6 +77,7 @@
 - (IBAction)longCoordinateTextField:(id)sender {
   
 }
+
 
 
 @end

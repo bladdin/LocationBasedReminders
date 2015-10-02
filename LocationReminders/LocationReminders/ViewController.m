@@ -31,7 +31,8 @@
   [super viewDidLoad];
  // self.myBlock = ^void(NSString *name){
 //}
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"textNotification" object:self];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addAnotiation:) name:(@"textNotification") object:nil];
+   
   //sign up to receive notification for a given name
   
   
@@ -88,6 +89,39 @@
   annot.title = @"Heres a Pin";
   [self.MKMapView addAnnotation:annot];
   }
+
+-(void)addAnotiation: (NSNotification *)sender{
+  
+  
+  NSNumber *lat = [sender.userInfo objectForKey:@"latTextField"];
+  NSNumber *longi = [sender.userInfo objectForKey:@"longTextField"];
+  
+  NSLog(@"%@",lat);
+  
+  double latDou = [lat doubleValue];
+  double longDou = [longi doubleValue];
+
+  NSString *reminderTitle = [sender.userInfo objectForKey:@"reminderTextfield"];
+  
+  PFGeoPoint* geoPoint = [PFGeoPoint geoPointWithLatitude:latDou longitude:longDou];
+  PFObject *place = [[PFObject alloc] initWithClassName:@"Place"];
+  place[@"location"] = geoPoint;
+  place[@"name"] = reminderTitle;
+  
+  [place saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+    if (error) {
+      NSLog(@"There was an error");
+    }else if (succeeded)
+      [place saveInBackground];
+  }];
+  
+  MKPointAnnotation *annot = [[MKPointAnnotation alloc]init];
+  annot.coordinate = CLLocationCoordinate2DMake(latDou, longDou);
+  annot.title = reminderTitle;
+  [self.MKMapView addAnnotation:annot];
+  [[NSNotificationCenter defaultCenter]removeObserver:self name:@"textNotification" object:nil];
+}
+
 
 //write method that fires when notification is received, this will upload the reminder to parse
 //pull the userInfo dictionary out of the notification
@@ -175,6 +209,14 @@
   [self.MKMapView setRegion:MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(35.6833, 139.6833), 100, 100) animated:true];
 }
 
+-(MKOverlayRenderer *)MKMapView:(MKMapView *) MKMapView rendererForOverlay:(id<MKOverlay>)overlay {
+  MKCircleRenderer *circleRenderer = [[MKCircleRenderer alloc] initWithOverlay:overlay];
+  
+  circleRenderer.fillColor = [UIColor redColor];
+  circleRenderer.alpha = 0.5;
+  
+  return circleRenderer;
+}
 
 
 @end
