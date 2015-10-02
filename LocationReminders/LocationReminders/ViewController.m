@@ -209,7 +209,7 @@
   [self.MKMapView setRegion:MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(35.6833, 139.6833), 100, 100) animated:true];
 }
 
--(MKOverlayRenderer *)MKMapView:(MKMapView *) MKMapView rendererForOverlay:(id<MKOverlay>)overlay {
+-(MKOverlayRenderer *)mapView:(MKMapView *) MKMapView rendererForOverlay:(id<MKOverlay>)overlay {
   MKCircleRenderer *circleRenderer = [[MKCircleRenderer alloc] initWithOverlay:overlay];
   
   circleRenderer.fillColor = [UIColor redColor];
